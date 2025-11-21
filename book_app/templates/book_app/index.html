@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <!-- بخش هیرو با کتاب‌های شناور -->
+    <div class="page-section">
+        <div class="welcome-hero">
+            <div class="floating-books">
+                <div class="book-float">📚</div>
+                <div class="book-float">📖</div>
+                <div class="book-float">✨</div>
+            </div>
+            <h1 class="welcome-title">به کتابخانه دیجیتال شما خوش آمدید</h1>
+            <p class="welcome-subtitle">مدیریت کتاب‌هایتان را به زیباترین شکل تجربه کنید</p>
+        </div>
+    </div>
+
+    <!-- کارت‌های عملیاتی -->
+    <div class="page-section">
+        <div class="row justify-content-center g-4">
+            <!-- کارت لیست کتاب‌ها -->
+            <div class="col-md-5 mb-4">
+                <div class="card shadow-lg h-100 action-card"
+                     onclick="window.location.href='{% url 'book_list' %}'"
+                     style="cursor: pointer;">
+                    <div class="card-body text-center p-5">
+                        <div class="mb-4">
+                            <i class="fas fa-book-open fa-4x text-info"></i>
+                        </div>
+                        <h3 class="card-title text-info">لیست کتاب‌ها</h3>
+                        <p class="card-text text-muted">
+                            مشاهده تمام کتاب‌های موجود در کتابخانه. می‌توانید کتاب‌ها را بر اساس وضعیت مطالعه، ژانر و تاریخ جستجو کنید.
+                        </p>
+                        <div class="mt-4">
+                            <span class="btn btn-info btn-lg">
+                                <i class="fas fa-list"></i> مشاهده لیست کتاب‌ها
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- کارت مدیریت کتاب‌ها -->
+            <div class="col-md-5 mb-4">
+                <div class="card shadow-lg h-100 action-card"
+                     onclick="window.location.href='{% url 'book_form' %}'"
+                     style="cursor: pointer;">
+                    <div class="card-body text-center p-5">
+                        <div class="mb-4">
+                            <i class="fas fa-tasks fa-4x text-success"></i>
+                        </div>
+                        <h3 class="card-title text-success">مدیریت کتاب‌ها</h3>
+                        <p class="card-text text-muted">
+                            ایجاد کتاب جدید یا ویرایش کتاب‌های موجود. اطلاعات کتاب‌ها را اضافه، ویرایش یا به روزرسانی کنید.
+                        </p>
+                        <div class="mt-4">
+                            <span class="btn btn-success btn-lg">
+                                <i class="fas fa-cog"></i> مدیریت کتاب‌ها
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- آمار سریع -->
+    <div class="page-section">
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <div class="stats-card">
+                    <h4 class="stats-title">📊 کتابخانه شما</h4>
+                    <p class="stats-description">شروع به سازماندهی کتاب‌های خود کنید و تجربه مطالعه بهتری داشته باشید</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// انیمیشن کتاب‌های شناور با JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const bookFloats = document.querySelectorAll('.book-float');
+
+    // انیمیشن کتاب‌ها
+    function animateBooks() {
+        bookFloats.forEach((book, index) => {
+            // حرکت بالا و پایین با چرخش
+            const time = Date.now() * 0.001;
+            const offset = index * 0.3; // تأخیر بین کتاب‌ها
+
+            const y = Math.sin(time + offset) * 20; // حرکت عمودی
+            const rotation = Math.sin(time + offset) * 8; // چرخش
+
+            book.style.transform = `translateY(${y}px) rotate(${rotation}deg)`;
+        });
+
+        requestAnimationFrame(animateBooks);
+    }
+
+    // شروع انیمیشن
+    animateBooks();
+
+    // انیمیشن پالس برای کارت آمار
+    const statsCard = document.querySelector('.stats-card');
+    let scale = 1;
+    let growing = true;
+
+    function pulseAnimation() {
+        if (growing) {
+            scale += 0.002;
+            if (scale >= 1.02) growing = false;
+        } else {
+            scale -= 0.002;
+            if (scale <= 1) growing = true;
+        }
+
+        statsCard.style.transform = `scale(${scale})`;
+        requestAnimationFrame(pulseAnimation);
+    }
+
+    // شروع انیمیشن پالس
+    pulseAnimation();
+});
+</script>
+{% endblock %}

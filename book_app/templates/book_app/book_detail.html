@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 page-section book-detail-page">
+
+  <!-- دکمه بازگشت به صفحه اصلی -->
+  <div class="row mb-3">
+    <div class="col-12">
+      <a href="{% url 'index' %}" class="btn btn-outline-primary mb-3">
+        <i class="fas fa-home"></i> بازگشت به صفحه اصلی
+      </a>
+    </div>
+  </div>
+
+  <div class="card glass-card shadow-lg border-0">
+    <div class="card-body">
+
+      <!-- عنوان کتاب -->
+      <h3 class="card-title mb-3">{{ book_dt.title }}</h3>
+
+      <!-- نویسنده -->
+      <h5 class="text-muted mb-4">
+        نویسنده: {{ book_dt.author }}
+      </h5>
+
+      <!-- اطلاعات کتاب -->
+      <p class="card-text fs-5">
+        <strong>ژانر:</strong> {{ book_dt.genre }}<br>
+        <strong>تاریخ چاپ:</strong> {{ book_dt.published_date }}<br>
+
+        <strong>وضعیت مطالعه:</strong>
+        {% if book_dt.is_read %}
+          <span class="badge bg-success">خوانده شده</span>
+        {% else %}
+          <span class="badge bg-secondary">خوانده نشده</span>
+        {% endif %}
+      </p>
+
+      <!-- تاریخ ثبت -->
+      <p class="text-muted mt-3">
+        <small>تاریخ ثبت در سیستم: {{ book_dt.created_at|date:"Y-m-d H:i" }}</small>
+      </p>
+
+      <!-- دکمه‌های ویرایش، حذف و بازگشت -->
+      <div class="d-flex gap-2 mt-4">
+        <a href="{% url 'book_update' book_dt.pk %}" class="btn btn-warning">
+          <i class="fas fa-edit"></i> ویرایش کتاب
+        </a>
+        <a href="{% url 'toggle_read' book_dt.pk %}" class="btn {% if book_dt.is_read %}btn-secondary{% else %}btn-success{% endif %}">
+        <i class="fas {% if book_dt.is_read %}fa-times{% else %}fa-check{% endif %}"></i>
+        {% if book_dt.is_read %}علامت به عنوان نخوانده{% else %}علامت به عنوان خوانده شده{% endif %}
+    </a>
+        <a href="{% url 'book_delete' book_dt.pk %}" class="btn btn-danger">
+          <i class="fas fa-trash"></i> حذف کتاب
+        </a>
+        <a href="{% url 'book_list' %}" class="btn btn-primary">
+          <i class="fas fa-arrow-right"></i> بازگشت به لیست کتاب‌ها
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

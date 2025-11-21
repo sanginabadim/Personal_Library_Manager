@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="be5018f1-4ba5-4538-bafa-759ba81f8965" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Personal_Library_Manager.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Personal_Library_Manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Personal_Library_Manager/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Personal_Library_Manager/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Personal_Library_Manager/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Personal_Library_Manager/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/bootstrap-5.3.8-dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/static/book_app/css/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/templates/book_app/book_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/templates/book_app/book_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/templates/book_app/book_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/templates/book_app/book_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/templates/book_app/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_app/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="35fA4hfu7CbrlYVk2IYruMGyBP6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/mohammad ali/Desktop/django_projects/Personal_Library_Manager/book_app/static",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mohammad ali\Desktop\django_projects\Personal_Library_Manager\book_app\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mohammad ali\Desktop\django_projects\Personal_Library_Manager\book_app\static\book_app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Personal_Library_Manager" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Personal_Library_Manager" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be5018f1-4ba5-4538-bafa-759ba81f8965" name="Changes" comment="" />
+      <created>1763490562607</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763490562607</updated>
+      <workItem from="1763490595006" duration="9559000" />
+      <workItem from="1763744169700" duration="11851000" />
+      <workItem from="1763757461602" duration="446000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

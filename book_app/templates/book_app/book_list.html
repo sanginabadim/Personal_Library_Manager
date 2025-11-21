@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5">
+    <div class="page-section">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3">
+            <h2 class="mb-0">لیست کتاب‌ها</h2>
+            <a href="{% url 'book_create' %}" class="btn btn-success">
+                <i class="fas fa-plus"></i> ایجاد کتاب جدید
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <!-- بخش جستجو و فیلتر -->
+    <div class="page-section">
+        <div class="search-filter-section">
+            <div class="row">
+            <!-- جستجو -->
+            <div class="col-md-6 mb-3">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="bookSearch" placeholder="جستجو در کتاب‌ها...">
+                </div>
+            </div>
+
+            <!-- فیلترها -->
+            <div class="col-md-6 mb-3">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">همه</button>
+                    <button class="filter-btn" data-filter="read">خوانده شده</button>
+                    <button class="filter-btn" data-filter="unread">خوانده نشده</button>
+                    <select class="genre-filter form-select">
+                        <option value="">همه ژانرها</option>
+                        {% for genre in genres %}
+                        <option value="{{ genre }}">{{ genre }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="page-section">
+        <div class="row" id="booksContainer">
+        {% for book in books %}
+        <div class="col-md-4 mb-4 book-item"
+             data-title="{{ book.title|lower }}"
+             data-author="{{ book.author|lower }}"
+             data-status="{% if book.is_read %}read{% else %}unread{% endif %}"
+             data-genre="{{ book.genre|default:'' }}">
+            <div class="book-card-modern">
+                <div class="book-cover">
+                    <div class="book-title">{{ book.title|truncatechars:20 }}</div>
+                    <div class="book-author">{{ book.author }}</div>
+                </div>
+                <div class="book-info">
+                    <span class="badge genre-badge">{{ book.genre|default:"عمومی" }}</span>
+                    <div class="reading-status {% if book.is_read %}read{% else %}unread{% endif %}">
+                        <i class="fas {% if book.is_read %}fa-bookmark{% else %}fa-book{% endif %}"></i>
+                        {{ book.is_read|yesno:"خوانده شده,در حال خواندن" }}
+                    </div>
+                </div>
+
+                <!-- اطلاعات اضافی -->
+                <div class="book-details">
+                    <div class="detail-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>{{ book.published_date|default:"تاریخ نامشخص" }}</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>{{ book.created_at|date:"Y/m/d" }}</span>
+                    </div>
+                </div>
+
+                <!-- دکمه‌های سریع -->
+                <div class="book-actions">
+                    <a href="{% url 'book_detail' book.id %}" class="action-btn detail-btn">
+                        <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="{% url 'toggle_read' book.id %}" class="action-btn toggle-btn {% if book.is_read %}read{% else %}unread{% endif %}">
+                        <i class="fas {% if book.is_read %}fa-undo{% else %}fa-check{% endif %}"></i>
+                    </a>
+                    <a href="{% url 'book_update' book.id %}" class="action-btn edit-btn">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="empty-state">
+                <i class="fas fa-book-open fa-3x"></i>
+                <h3>کتابی ثبت نشده است</h3>
+                <p>اولین کتاب خود را به کتابخانه اضافه کنید</p>
+                <a href="{% url 'book_create' %}" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> ایجاد کتاب جدید
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+
+    <!-- دکمه بازگشت به صفحه اصلی در پایین صفحه -->
+        <div class="row mt-5">
+        <div class="col-12 text-center">
+            <a href="{% url 'index' %}" class="btn btn-outline-primary">
+                <i class="fas fa-home"></i> بازگشت به صفحه اصلی
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('bookSearch');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const genreFilter = document.querySelector('.genre-filter');
+    const bookItems = document.querySelectorAll('.book-item');
+
+    // تابع فیلتر کردن کتاب‌ها
+    function filterBooks() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+        const selectedGenre = genreFilter.value;
+
+        bookItems.forEach(item => {
+            const title = item.dataset.title;
+            const author = item.dataset.author;
+            const status = item.dataset.status;
+            const genre = item.dataset.genre;
+
+            // بررسی جستجو
+            const matchesSearch = title.includes(searchTerm) || author.includes(searchTerm);
+
+            // بررسی فیلتر وضعیت
+            const matchesStatus = activeFilter === 'all' || status === activeFilter;
+
+            // بررسی فیلتر ژانر
+            const matchesGenre = !selectedGenre || genre === selectedGenre;
+
+            // نمایش یا مخفی کردن
+            if (matchesSearch && matchesStatus && matchesGenre) {
+                item.classList.remove('hidden');
+            } else {
+                item.classList.add('hidden');
+            }
+        });
+    }
+
+    // رویداد جستجو
+    searchInput.addEventListener('input', filterBooks);
+
+    // رویداد فیلتر وضعیت
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            filterBooks();
+        });
+    });
+
+    // رویداد فیلتر ژانر
+    genreFilter.addEventListener('change', filterBooks);
+
+    // مقدار اولیه
+    filterBooks();
+});
+</script>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 page-section">
+    <!-- دکمه بازگشت به صفحه اصلی -->
+    <div class="row mb-3">
+        <div class="col-12">
+            <a href="{% url 'index' %}" class="btn btn-outline-primary mb-3">
+                <i class="fas fa-home"></i> بازگشت به صفحه اصلی
+            </a>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card glass-card border border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0"><i class="fas fa-exclamation-triangle"></i> تأیید حذف کتاب</h4>
+                </div>
+                <div class="card-body text-center">
+                    <!-- آیکون هشدار -->
+                    <div class="mb-4">
+                        <i class="fas fa-trash-alt fa-5x text-danger"></i>
+                    </div>
+                    
+                    <!-- پیام هشدار -->
+                    <h5 class="card-title text-danger">آیا از حذف این کتاب مطمئن هستید؟</h5>
+                    
+                    <!-- اطلاعات کتاب -->
+                    <div class="alert alert-warning mt-4">
+                        <strong>عنوان:</strong> {{ book.title }}<br>
+                        <strong>نویسنده:</strong> {{ book.author }}<br>
+                        <strong>ژانر:</strong> {{ book.genre }}
+                    </div>
+                    
+                    <p class="text-muted">
+                        این عمل غیرقابل بازگشت است و کتاب به طور کامل از سیستم حذف خواهد شد.
+                    </p>
+
+                    <!-- فرم حذف -->
+                    <form method="post" class="mt-4">
+                        {% csrf_token %}
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                            <button type="submit" class="btn btn-danger me-md-2">
+                                <i class="fas fa-check"></i> بله، حذف شود
+                            </button>
+                            <a href="{% url 'book_detail' book.pk %}" class="btn btn-secondary">
+                                <i class="fas fa-times"></i> انصراف
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
